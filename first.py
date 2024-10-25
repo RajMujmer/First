@@ -16,5 +16,5 @@ st.write(
 )
 for i in range(1, 11):
     for j in range(1,11):
-        st.write(i ," * " , j ,"= ", i*j)
-        st.write(/n)
+        st.write(i ," * " , j ,"= ", i*j )
+     
