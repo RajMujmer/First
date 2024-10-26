@@ -11,7 +11,7 @@ st.set_page_config(page_title="Speaker", page_icon="🎫")
 st.title(" My Speaker ")
 st.header(
     """
-   Table from 1 to 10
+   Table 
     """
 )
 with st.form("Table of N"):
@@ -21,6 +21,6 @@ with st.form("Table of N"):
 
 if submitted:
         for j in range(1,11):
-            st.write(issue ," * " , j ,"= ", issue*j )
+            st.write(issue ," * " , j ,"= ", int(issue)*j )
         st.write("""--------------------""")
      
