@@ -9,12 +9,12 @@ import streamlit as st
 # Show app title and description.
 st.set_page_config(page_title="Speaker", page_icon="🎫")
 st.title(" My Speaker ")
-st.write(
+st.header(
     """
    Table from 1 to 10
     """
 )
-with st.form("add_ticket_form"):
+with st.form("Table of N"):
     issue = st.text_area("Number of which you want a table ")
     #priority = st.selectbox("Priority", ["High", "Medium", "Low"])
     submitted = st.form_submit_button("Submit")
