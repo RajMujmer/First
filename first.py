@@ -9,10 +9,10 @@ import streamlit as st
 st.markdown("""
 <style>
 body {
-    background-color: #YOUR_COLOR;
+    background-color: #FFFF00;
 }
 </style>
-""", unsafe_allow_html=True)
+
 
 # Show app title and description.
 st.set_page_config(page_title="Speaker", page_icon="🎫")
