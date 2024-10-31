@@ -23,10 +23,10 @@ page_bg = """
 
 # Apply the background color using markdown
 st.markdown(page_bg, unsafe_allow_html=True)
-
-tab1, tab2 = st.tabs(["Calculator", "Table Generator"])
-# Show app title and description
 st.title(" My Speaker ")
+tab2, tab1 = st.tabs(["Calculator", "Table Generator"])
+# Show app title and description
+
 with tab1:
     st.header("Table")
     with st.form("Table of N"):
@@ -38,8 +38,9 @@ with tab1:
             st.write(issue, " * ", j, "= ", int(issue) * j)
         st.write("-=-=-=-=-=-=-=-=-==--=-=-=-=-==-=-=-=-===-=-=-===-=")
 
-st.header("Calculator")
+
 with tab2:
+    st.header("Calculator")
     with st.form("Calculation"):
         num1 = st.number_input("Enter the first number", value=0.0, format="%.2f")
         num2 = st.number_input("Enter the second number", value=0.0, format="%.2f")
