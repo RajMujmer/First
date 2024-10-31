@@ -6,12 +6,16 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.markdown("""
+page_bg = """
 <style>
-body {
-    background-color: #FFFF00;
+.stApp {
+    background-color: #f5f5f5; /* Light grey background */
 }
-</style>""")
+</style>
+"""
+
+# Apply the background color using markdown
+st.markdown(page_bg, unsafe_allow_html=True)
 
 
 # Show app title and description.
