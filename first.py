@@ -49,16 +49,16 @@ with tab2:
 
     if submitted:
         result = None
-        if operation == "Add":
+        if Option == "Add":
             result = num1 + num2
             st.write(f"The result of addition is: {result}")
-        elif operation == "Subtract":
+        elif Option == "Subtract":
             result = num1 - num2
             st.write(f"The result of subtraction is: {result}")
-        elif operation == "Multiply":
+        elif Option == "Multiply":
             result = num1 * num2
             st.write(f"The result of multiplication is: {result}")
-        elif operation == "Divide":
+        elif Option == "Divide":
             if num2 != 0:
                 result = num1 / num2
                 st.write(f"The result of division is: {result}")
