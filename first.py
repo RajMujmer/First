@@ -11,7 +11,7 @@ st.markdown("""
 body {
     background-color: #FFFF00;
 }
-</style>"""
+</style>""")
 
 
 # Show app title and description.
