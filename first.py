@@ -35,4 +35,29 @@ with st.form("Table of N"):
 if submitted:
     for j in range(1, 11):
         st.write(issue, " * ", j, "= ", int(issue) * j)
-    st.write("---------------------------")
+    st.write("-=-=-=-=-=-=-=-=-==--=-=-=-=-==-=-=-=-===-=-=-===-=")
+
+st.header("Calculator")
+with st.form("Calculation"):
+    num1 = st.number_input("Enter the first number", value=0.0, format="%.2f")
+    num2 = st.number_input("Enter the second number", value=0.0, format="%.2f")
+    Option = st.selectbox("Option", ["Addition", "Subtration", "Multiplication", "Division"])
+    submitted = st.form_submit_button("Calculate")
+
+if submitted:
+    result = None
+    if operation == "Add":
+        result = num1 + num2
+        st.write(f"The result of addition is: {result}")
+    elif operation == "Subtract":
+        result = num1 - num2
+        st.write(f"The result of subtraction is: {result}")
+    elif operation == "Multiply":
+        result = num1 * num2
+        st.write(f"The result of multiplication is: {result}")
+    elif operation == "Divide":
+        if num2 != 0:
+            result = num1 / num2
+            st.write(f"The result of division is: {result}")
+        else:
+            st.write("Error: Division by zero is undefined.")
