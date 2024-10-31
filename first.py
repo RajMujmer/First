@@ -24,40 +24,42 @@ page_bg = """
 # Apply the background color using markdown
 st.markdown(page_bg, unsafe_allow_html=True)
 
+tab1, tab2 = st.tabs(["Calculator", "Table Generator"])
 # Show app title and description
 st.title(" My Speaker ")
-st.header("Table")
+with tab1:
+    st.header("Table")
+    with st.form("Table of N"):
+        issue = st.text_area("Number of which you want a table ")
+        submitted = st.form_submit_button("Submit")
 
-with st.form("Table of N"):
-    issue = st.text_area("Number of which you want a table ")
-    submitted = st.form_submit_button("Submit")
-
-if submitted:
-    for j in range(1, 11):
-        st.write(issue, " * ", j, "= ", int(issue) * j)
-    st.write("-=-=-=-=-=-=-=-=-==--=-=-=-=-==-=-=-=-===-=-=-===-=")
+    if submitted:
+        for j in range(1, 11):
+            st.write(issue, " * ", j, "= ", int(issue) * j)
+        st.write("-=-=-=-=-=-=-=-=-==--=-=-=-=-==-=-=-=-===-=-=-===-=")
 
 st.header("Calculator")
-with st.form("Calculation"):
-    num1 = st.number_input("Enter the first number", value=0.0, format="%.2f")
-    num2 = st.number_input("Enter the second number", value=0.0, format="%.2f")
-    Option = st.selectbox("Option", ["Addition", "Subtration", "Multiplication", "Division"])
-    submitted = st.form_submit_button("Calculate")
+with tab2:
+    with st.form("Calculation"):
+        num1 = st.number_input("Enter the first number", value=0.0, format="%.2f")
+        num2 = st.number_input("Enter the second number", value=0.0, format="%.2f")
+        Option = st.selectbox("Option", ["Addition", "Subtration", "Multiplication", "Division"])
+        submitted = st.form_submit_button("Calculate")
 
-if submitted:
-    result = None
-    if operation == "Add":
-        result = num1 + num2
-        st.write(f"The result of addition is: {result}")
-    elif operation == "Subtract":
-        result = num1 - num2
-        st.write(f"The result of subtraction is: {result}")
-    elif operation == "Multiply":
-        result = num1 * num2
-        st.write(f"The result of multiplication is: {result}")
-    elif operation == "Divide":
-        if num2 != 0:
-            result = num1 / num2
-            st.write(f"The result of division is: {result}")
-        else:
-            st.write("Error: Division by zero is undefined.")
+    if submitted:
+        result = None
+        if operation == "Add":
+            result = num1 + num2
+            st.write(f"The result of addition is: {result}")
+        elif operation == "Subtract":
+            result = num1 - num2
+            st.write(f"The result of subtraction is: {result}")
+        elif operation == "Multiply":
+            result = num1 * num2
+            st.write(f"The result of multiplication is: {result}")
+        elif operation == "Divide":
+            if num2 != 0:
+                result = num1 / num2
+                st.write(f"The result of division is: {result}")
+            else:
+                st.write("Error: Division by zero is undefined.")
