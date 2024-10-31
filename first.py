@@ -16,7 +16,7 @@ st.set_page_config(
 page_bg = """
 <style>
 .stApp {
-    background-color: #f5f5f5; /* Light grey background */
+    background-color: #FFFF00; /* Light grey background */
 }
 </style>
 """
