@@ -11,7 +11,7 @@ st.markdown("""
 body {
     background-color: #FFFF00;
 }
-</style>
+</style>"""
 
 
 # Show app title and description.
@@ -30,4 +30,4 @@ with st.form("Table of N"):
 if submitted:
         for j in range(1,11):
             st.write(issue ," * " , j ,"= ", int(issue)*j )
-        
+        st.write("---------------------------")
