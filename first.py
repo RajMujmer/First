@@ -74,10 +74,9 @@ with tab2:
                 if ms == "Area":
                     n1 = st.number_input("Acre", value=0.0, format="%.2f")
                     ar = selectbox("area", ["Acre to Hectare", "Sq ft to Sq m", "Sq km to Sq m"])
-                    if ar == "Acre to Hectare":
-                        submitted = st.form_submit_button("Acre to Hectare")
-                        if submitted:
-                            res = (n1/10 )* 4
-                            st.write(f"{n1} Acre is equal to {res} Hectare")
+                    submitted = st.form_submit_button("Acre to Hectare")
+                    if submitted:
+                        res = (n1/10 )* 4
+                        st.write(f"{n1} Acre is equal to {res} Hectare")
             
             
