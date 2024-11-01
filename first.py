@@ -24,7 +24,7 @@ page_bg = """
 # Apply the background color using markdown
 st.markdown(page_bg, unsafe_allow_html=True)
 st.title(" My Speaker ")
-tab2, tab1 = st.tabs(["Calculator", "Table Generator"])
+tab2, tab1, tab3 = st.tabs(["Calculator", "Table Generator", "Measures"])
 # Show app title and description
 
 with tab1:
@@ -64,3 +64,15 @@ with tab2:
                 st.write(f"The result of division is: {result}")
             else:
                 st.write("Error: Division by zero is undefined.")
+    with tab3:
+        st.header("Measures")
+        with st.form("!!Measurement!!"):
+            ms = st.selectbox("Measures", ["Area", "BMI", "Length", "Speed", "Time", "GST"]
+            if ms == "Area":
+                n1 = st.number_input("Acre", value=0.0, format="%.2f")
+                ar = selectbox("area", ["Acre to Hectare", "Sq ft to Sq m", "Sq km to Sq m"])
+                if ar == "Acre to Hectare":
+                    res = (n1/10 )* 4
+                    st.write(f"{n1} Acre is equal to {res} Hectare")
+            
+            
