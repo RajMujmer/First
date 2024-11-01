@@ -73,8 +73,11 @@ with tab2:
             if submitted:
                 res = None
                 if ms == "Area" and ar == "Acre to Hectare":
-                        n1 = st.number_input("Acre", value=0.0, format="%.2f")
-                        res = (n1/10 )* 4
-                        st.write(f"{n1} Acre is equal to {res} Hectare")
-            
+                    n1 = st.number_input("Acre", value=0, format="%.2f")
+                    res = (n1/10 )* 4
+                    st.write(f"{n1} Acre is equal to {res} Hectare")
+                if ms == "Area" and ar == "Sq ft to Sq m":
+                    n1 = st.number_input("Square Foot", value = 0, format= "%.2f")
+                    res = n1/10.76
+                    st.write(f"{n1} Square Foot is Equal to {res} Square meter")
             
