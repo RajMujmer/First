@@ -67,7 +67,7 @@ with tab2:
     with tab3:
         st.header("Measures")
         with st.form("!!Measurement!!"):
-            ms = st.selectbox("Measures", ["Area", "BMI", "Length", "Speed", "Time", "GST"]
+            ms = st.selectbox("Measures", ["Area", "BMI", "Length", "Speed", "Time", "GST"])
             if ms == "Area":
                 n1 = st.number_input("Acre", value=0.0, format="%.2f")
                 ar = selectbox("area", ["Acre to Hectare", "Sq ft to Sq m", "Sq km to Sq m"])
