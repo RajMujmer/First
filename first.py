@@ -42,8 +42,8 @@ with tab1:
 with tab2:
     st.header("Calculator")
     with st.form("Calculation"):
-        num1 = st.number_input("Enter the first number", value=0.0, format="%.2f")
-        num2 = st.number_input("Enter the second number", value=0.0, format="%.2f")
+        num1 = st.number_input("Enter the first number", value=0.0, format="%f")
+        num2 = st.number_input("Enter the second number", value=0.0, format="%f")
         Option = st.selectbox("Option", ["Addition", "Subtraction", "Multiplication", "Division"])
         submitted = st.form_submit_button("Calculate")
 
