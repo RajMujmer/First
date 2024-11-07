@@ -81,6 +81,6 @@ with tab2:
                     res = n1/10.76
                     st.write(f"{n1} Square Foot is Equal to {res} Square meter")
                 if ms == "Area" and ar == "Sq km to Sq m":
-                    n1 = st.number_input("Square Kilometer", Value = 0.0, format = "%f")
+                    n1 = st.number_input("Square Kilometer", value = 0.0, format = "%f")
                     res = n1*100000
                     st.write(f"{n1} Square kilometer is = {res} meter")
