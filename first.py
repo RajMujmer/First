@@ -69,9 +69,7 @@ with tab2:
         with st.form("!!Measurement!!"):
             ms = st.selectbox("Measures", ["Area", "BMI", "Length", "Speed", "Time", "GST"])
             ar = st.selectbox("area", ["Acre to Hectare", "Sq ft to Sq m", "Sq km to Sq m"])
-            submitted = st.form_submit_button("Calculate")
-            if submitted:
-                res = None
+           
                 if ms == "Area" and ar == "Acre to Hectare":
                     n1 = st.number_input("Acre", value=0.0, format="%f")
                     res = (n1/10 )* 4
@@ -82,5 +80,5 @@ with tab2:
                     st.write(f"{n1} Square Foot is Equal to {res} Square meter")
                 if ms == "Area" and ar == "Sq km to Sq m":
                     n1 = st.number_input("Square Kilometer", value = 0.0, format = "%f")
-                    res = n1*100000
+                    res = n1*1000000
                     st.write(f"{n1} Square kilometer is = {res} meter")
