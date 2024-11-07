@@ -70,15 +70,15 @@ with tab2:
             ms = st.selectbox("Measures", ["Area", "BMI", "Length", "Speed", "Time", "GST"])
             ar = st.selectbox("area", ["Acre to Hectare", "Sq ft to Sq m", "Sq km to Sq m"])
            
-                if ms == "Area" and ar == "Acre to Hectare":
-                    n1 = st.number_input("Acre", value=0.0, format="%f")
-                    res = (n1/10 )* 4
-                    st.write(f"{n1} Acre is equal to {res} Hectare")
-                if ms == "Area" and ar == "Sq ft to Sq m":
-                    n1 = st.number_input("Square Foot", value = 0.0, format= "%f")
-                    res = n1/10.76
-                    st.write(f"{n1} Square Foot is Equal to {res} Square meter")
-                if ms == "Area" and ar == "Sq km to Sq m":
-                    n1 = st.number_input("Square Kilometer", value = 0.0, format = "%f")
-                    res = n1*1000000
-                    st.write(f"{n1} Square kilometer is = {res} meter")
+            if ms == "Area" and ar == "Acre to Hectare":
+                 n1 = st.number_input("Acre", value=0.0, format="%f")
+                 res = (n1/10 )* 4
+                 st.write(f"{n1} Acre is equal to {res} Hectare")
+            if ms == "Area" and ar == "Sq ft to Sq m":
+                 n1 = st.number_input("Square Foot", value = 0.0, format= "%f")
+                 res = n1/10.76
+                 st.write(f"{n1} Square Foot is Equal to {res} Square meter")
+            if ms == "Area" and ar == "Sq km to Sq m":
+                 n1 = st.number_input("Square Kilometer", value = 0.0, format = "%f")
+                 res = n1*1000000
+                 st.write(f"{n1} Square kilometer is = {res} meter")
