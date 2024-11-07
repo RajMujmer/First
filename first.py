@@ -85,8 +85,8 @@ with tab2:
                         n1 = st.number_input("Square Kilometer", value = 0.0, format = "%f")
                         res = n1*1000000
                         st.write(f"{n1} Square kilometer is = {res} meter")
-          if ms == "BMI":
-               weight = st.number_input("Enter your Weight (kg) ", value = 0.0, format = "%f")
-               height = st.number_input("Enter your Height (cm)", value = 0.0, format = "%f")
-               BMI = weight/((height/100)**2)
-               st.write(f"Your BMI is : {BMI}")
+                if ms == "BMI":
+                    weight = st.number_input("Enter your Weight (kg) ", value = 0.0, format = "%f")
+                    height = st.number_input("Enter your Height (cm)", value = 0.0, format = "%f")
+                    BMI = weight/((height/100)**2)
+                    st.write(f"Your BMI is : {BMI}")
